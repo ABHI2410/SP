@@ -1,6 +1,7 @@
 from .serializers import PhonebookSerializer
 from .models import Phonebook
 from django.contrib.auth.models import AnonymousUser
+from django.shortcuts import render
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.authentication import SessionAuthentication, BasicAuthentication
 from rest_framework_simplejwt.authentication import JWTAuthentication
@@ -43,23 +44,19 @@ class LoginAPIView(generics.GenericAPIView):
 class LogoutAPIView(generics.GenericAPIView):
     serializer_class = LogoutSerializer
     permission_classes = (permissions.IsAuthenticated,)
-    print("get request to logout")
     def post(self, request):
-        print(request.data)
         serializer = self.serializer_class(data=request.data)
-        print(serializer.is_valid())
         serializer.is_valid(raise_exception=True)
         serializer.save()
         logger.info(f"{request.user} loged out")
         return Response(status=status.HTTP_204_NO_CONTENT)
-
 
 @api_view(['GET'])
 def redirecttologin(request):
     if request.user == AnonymousUser:
         return HttpResponseRedirect(reverse("login"))
     else:
-        return HttpResponseRedirect(reverse("list"))
+        return HttpResponseRedirect(reverse("register"))
 
 
 @api_view(['GET'])
