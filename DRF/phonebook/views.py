@@ -43,8 +43,11 @@ class LoginAPIView(generics.GenericAPIView):
 class LogoutAPIView(generics.GenericAPIView):
     serializer_class = LogoutSerializer
     permission_classes = (permissions.IsAuthenticated,)
+    print("get request to logout")
     def post(self, request):
+        print(request.data)
         serializer = self.serializer_class(data=request.data)
+        print(serializer.is_valid())
         serializer.is_valid(raise_exception=True)
         serializer.save()
         logger.info(f"{request.user} loged out")

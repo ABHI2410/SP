@@ -5,11 +5,12 @@ from rest_framework import status
 from rest_framework.test import APIClient
 from django.contrib.auth.models import User
 from phonebook.models import Phonebook,User
+from rest_framework.test import APIClient
+from rest_framework_simplejwt.tokens import RefreshToken
 
 class AccountTests(APITestCase, URLPatternsTestCase):
     urlpatterns = [
         path('', include('phonebook.urls')),
-        # path('api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     ]
 
     
@@ -104,8 +105,6 @@ class AccountTests(APITestCase, URLPatternsTestCase):
         resp = self.test_login()
         token = resp.get("tokens").get("access")
         self.client.credentials(HTTP_AUTHORIZATION='Bearer ' + token)
-        client = APIClient()
-        client.credentials(HTTP_AUTHORIZATION='Bearer ' + token)
         url = reverse('add')
         name = ["Bruce Schneier","Schneier, Bruce","Schneier, Bruce Wayne","O’Malley, John F.","John O’Malley-Smith","Cher","Abhishek G. Patel","Thomas L. Jones","Lam"]
         phonenumber = ["123","1/703/123/1234","Nr 102-123-1234","<script>alert(“XSS”)</script>","7031111234","+1234 (201) 123-1234","+01 (703) 123-1234","(703) 123-1234 ext 204","(001) 123-1234"]
@@ -113,4 +112,3 @@ class AccountTests(APITestCase, URLPatternsTestCase):
             response = self.client.post(url,data={"name":name[i],"phone_number":phonenumber[i]},format = "json")
             self.assertEqual(response.status_code,status.HTTP_400_BAD_REQUEST)
             self.test_phonbook_list(testcases=0)
-
