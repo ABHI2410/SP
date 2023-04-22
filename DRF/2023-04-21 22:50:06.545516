@@ -1,0 +1,121 @@
+INFO 2023-04-22 03:50:07,529 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:07,825 127.0.0.1 Abhishek added Bruce Schneier to the phonbook 
+INFO 2023-04-22 03:50:07,963 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:07,965 127.0.0.1 Abhishek added Schneier, Bruce to the phonbook 
+INFO 2023-04-22 03:50:08,115 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:08,118 127.0.0.1 Abhishek added Schneier, Bruce Wayne to the phonbook 
+INFO 2023-04-22 03:50:08,273 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:08,276 127.0.0.1 Abhishek added O’Malley, John F. to the phonbook 
+INFO 2023-04-22 03:50:08,421 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:08,424 127.0.0.1 Abhishek added John O’Malley-Smith to the phonbook 
+INFO 2023-04-22 03:50:08,578 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:08,582 127.0.0.1 Abhishek added Cher to the phonbook 
+INFO 2023-04-22 03:50:08,733 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:08,736 127.0.0.1 Abhishek added Abhishek G. Patel to the phonbook 
+INFO 2023-04-22 03:50:08,882 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:08,885 127.0.0.1 Abhishek added Thomas L. Jones to the phonbook 
+INFO 2023-04-22 03:50:09,024 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:09,026 127.0.0.1 Abhishek added Lam to the phonbook 
+INFO 2023-04-22 03:50:09,166 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:09,599 127.0.0.1 Abhishek added Bruce Schneier to the phonbook 
+INFO 2023-04-22 03:50:09,741 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:09,743 127.0.0.1 Abhishek added Schneier, Bruce to the phonbook 
+INFO 2023-04-22 03:50:09,907 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:09,909 127.0.0.1 Abhishek added Schneier, Bruce Wayne to the phonbook 
+INFO 2023-04-22 03:50:10,072 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:10,075 127.0.0.1 Abhishek added O’Malley, John F. to the phonbook 
+INFO 2023-04-22 03:50:10,304 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:10,318 127.0.0.1 Abhishek added John O’Malley-Smith to the phonbook 
+INFO 2023-04-22 03:50:10,529 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:10,581 127.0.0.1 Abhishek added Cher to the phonbook 
+INFO 2023-04-22 03:50:10,729 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:10,732 127.0.0.1 Abhishek added Abhishek G. Patel to the phonbook 
+INFO 2023-04-22 03:50:10,875 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:10,877 127.0.0.1 Abhishek added Thomas L. Jones to the phonbook 
+INFO 2023-04-22 03:50:11,017 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,019 127.0.0.1 Abhishek added Lam to the phonbook 
+INFO 2023-04-22 03:50:11,168 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,171 127.0.0.1 Abhishek removed Bruce Schneier to the phonbook 
+INFO 2023-04-22 03:50:11,314 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,316 127.0.0.1 Abhishek removed Schneier, Bruce to the phonbook 
+INFO 2023-04-22 03:50:11,456 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,458 127.0.0.1 Abhishek removed Schneier, Bruce Wayne to the phonbook 
+INFO 2023-04-22 03:50:11,601 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,603 127.0.0.1 Abhishek removed O’Malley, John F. to the phonbook 
+INFO 2023-04-22 03:50:11,755 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,757 127.0.0.1 Abhishek removed John O’Malley-Smith to the phonbook 
+INFO 2023-04-22 03:50:11,959 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:11,970 127.0.0.1 Abhishek removed Cher to the phonbook 
+INFO 2023-04-22 03:50:12,135 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:12,137 127.0.0.1 Abhishek removed Abhishek G. Patel to the phonbook 
+INFO 2023-04-22 03:50:12,299 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:12,301 127.0.0.1 Abhishek removed Thomas L. Jones to the phonbook 
+INFO 2023-04-22 03:50:12,443 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:12,445 127.0.0.1 Abhishek removed Lam to the phonbook 
+INFO 2023-04-22 03:50:12,592 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,007 127.0.0.1 Abhishek added Bruce Schneier to the phonbook 
+INFO 2023-04-22 03:50:13,163 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,167 127.0.0.1 Abhishek added Schneier, Bruce to the phonbook 
+INFO 2023-04-22 03:50:13,328 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,330 127.0.0.1 Abhishek added Schneier, Bruce Wayne to the phonbook 
+INFO 2023-04-22 03:50:13,482 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,485 127.0.0.1 Abhishek added O’Malley, John F. to the phonbook 
+INFO 2023-04-22 03:50:13,654 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,658 127.0.0.1 Abhishek added John O’Malley-Smith to the phonbook 
+INFO 2023-04-22 03:50:13,796 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,798 127.0.0.1 Abhishek added Cher to the phonbook 
+INFO 2023-04-22 03:50:13,942 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:13,945 127.0.0.1 Abhishek added Abhishek G. Patel to the phonbook 
+INFO 2023-04-22 03:50:14,081 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,083 127.0.0.1 Abhishek added Thomas L. Jones to the phonbook 
+INFO 2023-04-22 03:50:14,233 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,235 127.0.0.1 Abhishek added Lam to the phonbook 
+INFO 2023-04-22 03:50:14,375 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,378 127.0.0.1 Abhishek removed Bruce Schneier to the phonbook 
+INFO 2023-04-22 03:50:14,520 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,523 127.0.0.1 Abhishek removed Schneier, Bruce to the phonbook 
+INFO 2023-04-22 03:50:14,680 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,684 127.0.0.1 Abhishek removed Schneier, Bruce Wayne to the phonbook 
+INFO 2023-04-22 03:50:14,830 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,835 127.0.0.1 Abhishek removed O’Malley, John F. to the phonbook 
+INFO 2023-04-22 03:50:14,976 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:14,979 127.0.0.1 Abhishek removed John O’Malley-Smith to the phonbook 
+INFO 2023-04-22 03:50:15,128 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:15,131 127.0.0.1 Abhishek removed Cher to the phonbook 
+INFO 2023-04-22 03:50:15,273 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:15,276 127.0.0.1 Abhishek removed Abhishek G. Patel to the phonbook 
+INFO 2023-04-22 03:50:15,417 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:15,420 127.0.0.1 Abhishek removed Thomas L. Jones to the phonbook 
+INFO 2023-04-22 03:50:15,567 127.0.0.1 Abhishek viewed the phonbook 
+INFO 2023-04-22 03:50:15,570 127.0.0.1 Abhishek removed Lam to the phonbook 
+INFO 2023-04-22 03:50:15,707 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:16,002 127.0.0.1 Abhishek tried added invalid entries(Ron O’’Henry) to the phonbook 
+INFO 2023-04-22 03:50:16,147 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:16,149 127.0.0.1 Abhishek tried added invalid entries(Ron O’Henry-Smith-Barnes) to the phonbook 
+INFO 2023-04-22 03:50:16,297 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:16,299 127.0.0.1 Abhishek tried added invalid entries(L33t Hacker) to the phonbook 
+INFO 2023-04-22 03:50:16,436 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:16,437 127.0.0.1 Abhishek tried added invalid entries(<Script>alert(“XSS”)</Script>) to the phonbook 
+INFO 2023-04-22 03:50:16,575 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:16,577 127.0.0.1 Abhishek tried added invalid entries(Brad Everett Samuel Smith) to the phonbook 
+INFO 2023-04-22 03:50:16,734 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:16,737 127.0.0.1 Abhishek tried added invalid entries(select * from users) to the phonbook 
+INFO 2023-04-22 03:50:16,878 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:17,163 127.0.0.1 Abhishek tried added invalid entries(123) to the phonbook 
+INFO 2023-04-22 03:50:17,313 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:17,315 127.0.0.1 Abhishek tried added invalid entries(1/703/123/1234) to the phonbook 
+INFO 2023-04-22 03:50:17,452 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:17,454 127.0.0.1 Abhishek tried added invalid entries(Nr 102-123-1234) to the phonbook 
+INFO 2023-04-22 03:50:17,591 127.0.0.1 Abhishek viewed the phonbook 
+ERROR 2023-04-22 03:50:17,593 {'phone_number': [ErrorDetail(string='Ensure this field has no more than 25 characters.', code='max_length')]} 
+INFO 2023-04-22 03:50:17,748 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:17,750 127.0.0.1 Abhishek tried added invalid entries(7031111234) to the phonbook 
+INFO 2023-04-22 03:50:17,895 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:17,897 127.0.0.1 Abhishek tried added invalid entries(+1234 (201) 123-1234) to the phonbook 
+INFO 2023-04-22 03:50:18,047 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:18,049 127.0.0.1 Abhishek tried added invalid entries(+01 (703) 123-1234) to the phonbook 
+INFO 2023-04-22 03:50:18,199 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:18,201 127.0.0.1 Abhishek tried added invalid entries((703) 123-1234 ext 204) to the phonbook 
+INFO 2023-04-22 03:50:18,343 127.0.0.1 Abhishek viewed the phonbook 
+WARNING 2023-04-22 03:50:18,345 127.0.0.1 Abhishek tried added invalid entries((001) 123-1234) to the phonbook 
+INFO 2023-04-22 03:50:18,488 127.0.0.1 Abhishek viewed the phonbook 
