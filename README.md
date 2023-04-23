@@ -5,6 +5,7 @@
 Programming Language: **Python 3.10**
 
 Framework: **Django Rest Framework 3.14.0**
+[![Build Status](https://app.travis-ci.com/ABHI2410/SP.svg?branch=master)](https://app.travis-ci.com/ABHI2410/SP)
 
 ### Steps to buid
 
