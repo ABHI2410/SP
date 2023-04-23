@@ -1,0 +1,17 @@
+jobs:
+  include:
+    - langusge: python
+      python: 
+        - "3.7"
+        - "3.8"
+        - "3.10"
+      install:
+        - python3 -m pip install -r ./DRF/requirements.txt
+      before_script:
+        - cd DRF
+      script: 
+        - python3 manage.py makemigrations phonebook
+        - python3 manage.py migrate
+        - coverage run --source='.' manage.py test --keepdb
+        - coverage html
+  
