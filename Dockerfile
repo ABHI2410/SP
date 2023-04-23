@@ -11,8 +11,7 @@ RUN python -m pip install -r ./requirements.txt &&\
     python manage.py makemigrations phonebook &&\
     python manage.py migrate &&\
     coverage run --source='.' manage.py test &&\
-    coverage html &&\
-    mv coverage_html_report phonebook
+    coverage html
 
 VOLUME [ "/data" ]
 

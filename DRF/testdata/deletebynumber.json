@@ -1,0 +1,13 @@
+{
+    "test_data": [
+        {
+            "phone_number": "67890"
+        },
+        {
+            "phone_number": "99202.66002"
+        },
+        {
+            "phone_number": "+1 992 026 6002"
+        }
+    ]
+}

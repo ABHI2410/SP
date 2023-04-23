@@ -4,7 +4,7 @@ from rest_framework_simplejwt.tokens import RefreshToken
 
 # Create your models here.
 class Phonebook(models.Model):
-    name = models.CharField(max_length=30,verbose_name="Name")
+    name = models.CharField(max_length=70,verbose_name="Name")
     phone_number = models.CharField(max_length=25,verbose_name="Phone Number")
 
 

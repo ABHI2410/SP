@@ -24,32 +24,36 @@ class RegisterView(generics.GenericAPIView):
     permission_classes =()
     serializer_class = RegisterSerializer
     def post(self,request):
+        CLIENT = get_client_ip(request)[0]
         user=request.data
         serializer = self.serializer_class(data=user)
         serializer.is_valid(raise_exception=True)
         serializer.save()
         user_data = serializer.data
-        logger.info(f"{request.user} registered")
+        logger.info(f"{request.method} {CLIENT} {request.data.get('username')} registed")
         return Response(user_data, status=status.HTTP_201_CREATED)
 
 class LoginAPIView(generics.GenericAPIView):
     permission_classes = ()
     serializer_class = LoginSerializer
     def post(self,request):
+        CLIENT = get_client_ip(request)[0]
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
-        logger.info(f"{request.user} loged in")
+        logger.info(f"{request.method} {CLIENT} {request.data.get('username')} loged in")
         return Response(serializer.data,status=status.HTTP_200_OK)
 
 class LogoutAPIView(generics.GenericAPIView):
     serializer_class = LogoutSerializer
     permission_classes = (permissions.IsAuthenticated,)
     def post(self, request):
+        CLIENT = get_client_ip(request)[0]
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
-        logger.info(f"{request.user} loged out")
+        logger.info(f"{CLIENT} {request.method} {request.user} loged out")
         return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 @api_view(['GET'])
 def redirecttologin(request):
@@ -66,8 +70,15 @@ def list(request):
     queryset = Phonebook.objects.all()
     serializer = PhonebookSerializer(queryset, many=True)
     CLIENT = get_client_ip(request)[0]
-    logger.info(f"{CLIENT} {request.user} viewed the phonbook")
+    logger.info(f"{request.method} {CLIENT} {request.user} viewed the phonbook")
     return Response(serializer.data)
+
+def set_special(n):
+    special_chars = []
+    for char in n:
+        if not char.isalnum() and char != ' ':
+            special_chars.append(char)
+    return (special_chars,len(special_chars))
 
 @api_view(['POST'])
 @authentication_classes([SessionAuthentication, BasicAuthentication, JWTAuthentication])
@@ -83,6 +94,15 @@ def add(request):
                 if name.count("'")>1 or name.count("-")>1 or name.count(",")>1 or name.count(".")>1:
                     return False
                 else:
+                    sc,count = set_special(name)
+                    for i in range(count):
+                        try:
+                            if name[name.index(sc[i])+1] in sc:
+                                return False
+                            if name[name.index(sc[i])-1] in sc:
+                                return False
+                        except IndexError:
+                            continue
                     return True
             else:
                 return False
@@ -102,7 +122,11 @@ def add(request):
             else:
                 pattern = "^(?:(?:\+?(?!0)\d{1,3}[\s.-]?)|(?:\(\d{1,3}\)[\s.-]?))?(?:\d[\s.-]?){7,14}\d$"
                 if re.match(pattern,number) is not None:
-                    return True
+                    matches =  "".join(re.findall(r'\d+', number))
+                    if int(matches[0]) == 0 and int(matches[1]) == 0:
+                        return False
+                    else:
+                        return True
                 else:
                     return False
     serializer = PhonebookSerializer(data=request.data)
@@ -111,25 +135,24 @@ def add(request):
         ph_no = request.data["phone_number"]
         validate_name = nameValidator(request.data["name"])
         validate_number = numberValidator(request.data["phone_number"])
-        # print(validate_name,validate_number)
         if validate_name and validate_number:
             serializer.save()
-            logger.info(f"{CLIENT} {request.user} added {name} to the phonbook")
+            logger.info(f"{request.method} {CLIENT} {request.user} added {name} to the phonbook")
             return Response(serializer.data, status=status.HTTP_201_CREATED)
         else:
             if validate_name is False and validate_number is False:
-                logger.warning(f"{CLIENT} {request.user} tried added invalid entries({name} and {ph_no}) to the phonbook")
+                logger.warning(f"{request.method} {CLIENT} {request.user} tried added invalid entries({name} and {ph_no}) to the phonbook")
                 return Response("Invalid Name and Phone Number Provided",status=status.HTTP_400_BAD_REQUEST)
             elif validate_number is False:
-                logger.warning(f"{CLIENT} {request.user} tried added invalid entries({ph_no}) to the phonbook")
+                logger.warning(f"{request.method} {CLIENT} {request.user} tried added invalid entries({ph_no}) to the phonbook")
                 return Response("Invalid Phone Number Provided",status=status.HTTP_400_BAD_REQUEST)
             elif validate_name is False:
-                logger.warning(f"{CLIENT} {request.user} tried added invalid entries({name}) to the phonbook")
+                logger.warning(f"{request.method} {CLIENT} {request.user} tried added invalid entries({name}) to the phonbook")
                 return Response("Invalid Name Provided",status=status.HTTP_400_BAD_REQUEST)
             else:
-                logger.error("Unexpected Error Occured")
+                logger.error(f"{request.method} Unexpected Error Occured")
                 return Response("Unexpected Error Occured Try again Later", status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-    logger.error(serializer.errors)
+    logger.error(CLIENT,serializer.errors)
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
     
 @api_view(['PUT'])
@@ -140,10 +163,10 @@ def deleteByName(request):
         CLIENT = get_client_ip(request)[0]
         val = request.data["name"]
         Phonebook.objects.filter(name = val).delete()
-        logger.info(f"{CLIENT} {request.user} removed {val} to the phonbook")
+        logger.info(f"{request.method} {CLIENT} {request.user} removed {val} to the phonbook")
         return Response(status=status.HTTP_204_NO_CONTENT)
     except Exception as e:
-        logger.error(f"Internal Server error {e}")
+        logger.error(f"{request.method} {CLIENT} {request.user} Internal Server error {e}")
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 @api_view(['PUT'])
@@ -155,10 +178,10 @@ def deleteByNunber(request):
     obj = Phonebook.objects.get(phone_number = val)
     try:
         Phonebook.objects.get(phone_number = val).delete()
-        logger.info(f"{CLIENT} {request.user} removed {obj.name} to the phonbook")
+        logger.info(f"{request.method} {CLIENT} {request.user} removed {obj.name} to the phonbook")
         return Response(status=status.HTTP_204_NO_CONTENT)
     except Exception as e:
-        logger.error(f"Internal Server error {e}")
+        logger.error(f"{request.method} {CLIENT} {request.user} Internal Server error {e}")
         return Response(status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
